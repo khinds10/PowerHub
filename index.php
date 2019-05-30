@@ -1,13 +1,14 @@
 <?php
 /**
  * RetroDashboard Central Data Hub
- *  This is a small PHP script to place on a webhost of your choosing. 
+ *  This is a small PHP site to place on a webhost of your choosing. 
  *  It has a simple API to get and set information to it. 
  *  Note: Don’t forget to include the .htaccess file for proper URL routing to take place.
  *
  * @author khinds
  * @license http://opensource.org/licenses/gpl-license.php GNU Public License
  */
+include 'settings.php';
 
 /**
  * check if a file is missing then create it if needed
@@ -100,6 +101,13 @@ if (isset($matches[0])) $getAll = true;
 preg_match('/\/(set)|(unset)\/?/', $urlParts['path'], $matches);
 $action = '';
 if (isset($matches[0])) $action = trim($matches[0], '/');
+
+// set action, we must check API secret key to continue
+if ($action == 'set' || $action == 'unset') {
+    $passed = false;
+    foreach (getallheaders() as $name => $value) if ($name == 'api-key' && md5($secretAPIKey) == $value) $passed = true;
+}
+if (($action == 'set' || $action == 'unset') && !$passed) die('{"message":"error: invalid request"}');
 
 // switch on the type of incoming request
 switch ($dashboardOption) {
