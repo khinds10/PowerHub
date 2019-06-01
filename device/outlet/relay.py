@@ -8,6 +8,7 @@ import webgpio, settings, requests, time
 
 # set up the pins to control relay one and two
 gpio.setmode(gpio.BCM)
+gpio.setwarnings(False)
 gpio.setup(settings.relayOnePin, gpio.OUT)
 gpio.setup(settings.relayTwoPin, gpio.OUT)
 
