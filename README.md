@@ -46,3 +46,6 @@ Note: {id} will be replaced by the real integer presented by the incoming reques
 	$messageFileName = 'message.msg' (name of the message text file)
 	$readingsFilesNames = 'reading{id}.avg' (name of the CSV averaged readings file)
 	$flagFilesNames = 'flag{id}.flg' (name of the boolean flag value flag file)
+	
+	
+REMEMBER TO CHMOD 777 THE values/* files!
