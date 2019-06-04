@@ -19,6 +19,8 @@ gpio.setup(settings.buttonTwoLightPin, gpio.OUT)
 # begin watching the power hub to turn on and off devices
 relayOne = False
 relayTwo = False
+relayOneCheck = False
+relayTwoCheck = False
 while True:
     relayOneCheck = webgpio.getRelayValue(settings.flagOne)
     if relayOne != relayOneCheck:
@@ -38,5 +40,5 @@ while True:
         else:
             webgpio.setPinHigh(settings.relayTwoPin)
             webgpio.setPinLow(settings.buttonTwoLightPin)
-        relayOne = relayTwoCheck
+        relayTwo = relayTwoCheck
     time.sleep(1)

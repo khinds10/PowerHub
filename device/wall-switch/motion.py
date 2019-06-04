@@ -8,6 +8,7 @@ import webgpio, settings, requests, time
 
 # set up the pins to control relay one and two
 gpio.setmode(gpio.BCM)
+gpio.setwarnings(False)
 
 # set up the pins that light toggle the button lights
 gpio.setup(settings.buttonOneLightPin, gpio.OUT)

@@ -9,8 +9,8 @@ def getRelayValue(flagKey):
     URL = settings.powerHubAPIURL + "flag/" + flagKey
     r = requests.get(url = URL)
     data = r.json()
-    return data['message'] == '1'
-
+    return int(data['message']) == 1
+    
 def setPinHigh(pin):
     """set a current GPIO pin to positive"""
     gpio.output(pin, gpio.HIGH)

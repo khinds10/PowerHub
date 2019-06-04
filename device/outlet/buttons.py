@@ -4,7 +4,7 @@
 import sys
 sys.path.append("..")
 import RPi.GPIO as gpio
-import webgpio, settings, requests, time
+import webgpio, settings, requests, time, hashlib
 from gpiozero import Button
 
 # setup the buttons
@@ -16,20 +16,26 @@ secretKey = hashlib.md5()
 secretKey.update(settings.secretAPIKey)
 secretKeyValue = secretKey.hexdigest()
 
-def relayButtonPressed(flagKey, buttonNumber):
+def relayButtonPressed(flagKey):
     """set the remote flag based on current status"""
-    action = '/unset'
-    if webgpio.getRelayValue(flagKey):
-        action = '/set'
+    action = '/set'
+    isSet = webgpio.getRelayValue(flagKey)
+    if isSet:
+        action = '/unset'
     URL = settings.powerHubAPIURL + "flag/" + flagKey + action
-    r = requests.get(url = URL, headers={"api-key":secretKeyValue})
-    data = r.json()
+    requests.get(url = URL, headers={"api-key":secretKeyValue})
+    
+def relayButtonOnePressed():
+    relayButtonPressed(settings.flagOne)
+
+def relayButtonTwoPressed():
+    relayButtonPressed(settings.flagTwo)
 
 # begin the button listener
 while True:
     try:
-        buttonOne.when_pressed = relayButtonPressed(settings.flagOne, 1)
-        buttonTwo.when_pressed = relayButtonPressed(settings.flagTwo, 2)
+        buttonOne.when_pressed = relayButtonOnePressed
+        buttonTwo.when_pressed = relayButtonTwoPressed
         time.sleep(0.1)
     except (Exception):
         time.sleep(1)
