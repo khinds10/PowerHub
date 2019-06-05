@@ -49,3 +49,9 @@ Note: {id} will be replaced by the real integer presented by the incoming reques
 	
 	
 REMEMBER TO CHMOD 777 THE values/* files!
+
+@reboot python /home/pi/PowerHub/device/outlet/buttons.py
+@reboot python /home/pi/PowerHub/device/outlet/relay.py
+
+
+

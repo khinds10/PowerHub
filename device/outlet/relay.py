@@ -2,7 +2,7 @@
 # Kevin Hinds http://www.kevinhinds.com
 # License: GPL 2.0
 import sys
-sys.path.append("..")
+sys.path.append("/home/pi/PowerHub/device/")
 import RPi.GPIO as gpio
 import webgpio, settings, requests, time
 
