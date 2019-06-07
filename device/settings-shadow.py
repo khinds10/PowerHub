@@ -21,3 +21,9 @@ buttonTwoClickPin = 23
 # button light GPIO pins
 buttonOneLightPin = 24
 buttonTwoLightPin = 25
+
+# motion detector GPIO pin
+motionDetectorPin = 11
+
+# which flags the motion detector turns on
+motionDetectorPin = ['1', '2']

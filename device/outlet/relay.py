@@ -22,23 +22,26 @@ relayTwo = False
 relayOneCheck = False
 relayTwoCheck = False
 while True:
-    relayOneCheck = webgpio.getRelayValue(settings.flagOne)
-    if relayOne != relayOneCheck:
-        if relayOneCheck:
-            webgpio.setPinLow(settings.relayOnePin)
-            webgpio.setPinHigh(settings.buttonOneLightPin)
-        else:
-            webgpio.setPinHigh(settings.relayOnePin)
-            webgpio.setPinLow(settings.buttonOneLightPin)
-        relayOne = relayOneCheck
+    try:
+        relayOneCheck = webgpio.getRelayValue(settings.flagOne)
+        if relayOne != relayOneCheck:
+            if relayOneCheck:
+                webgpio.setPinLow(settings.relayOnePin)
+                webgpio.setPinHigh(settings.buttonOneLightPin)
+            else:
+                webgpio.setPinHigh(settings.relayOnePin)
+                webgpio.setPinLow(settings.buttonOneLightPin)
+            relayOne = relayOneCheck
 
-    relayTwoCheck = webgpio.getRelayValue(settings.flagTwo)
-    if relayTwo != relayTwoCheck:
-        if relayTwoCheck:
-            webgpio.setPinLow(settings.relayTwoPin)
-            webgpio.setPinHigh(settings.buttonTwoLightPin)
-        else:
-            webgpio.setPinHigh(settings.relayTwoPin)
-            webgpio.setPinLow(settings.buttonTwoLightPin)
-        relayTwo = relayTwoCheck
-    time.sleep(1)
+        relayTwoCheck = webgpio.getRelayValue(settings.flagTwo)
+        if relayTwo != relayTwoCheck:
+            if relayTwoCheck:
+                webgpio.setPinLow(settings.relayTwoPin)
+                webgpio.setPinHigh(settings.buttonTwoLightPin)
+            else:
+                webgpio.setPinHigh(settings.relayTwoPin)
+                webgpio.setPinLow(settings.buttonTwoLightPin)
+            relayTwo = relayTwoCheck
+        time.sleep(1)
+    except (Exception):
+        time.sleep(1)
