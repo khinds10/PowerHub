@@ -183,7 +183,59 @@ Note: {id} will be replaced by the real integer presented by the incoming reques
 
 # Supplies Needed
 
-# Building the XYZ
+**1 inch hole saw (for a drill)**
+
+![1 inch hole saw](https://raw.githubusercontent.com/khinds10/PowerHub/master/construction/hole-cutter.jpeg "1 inch hole saw")
+
+**5V 2 Channel Relay Module**
+
+![5V 2 Channel Relay Module](https://raw.githubusercontent.com/khinds10/PowerHub/master/construction/2ChannelDC5VRelayModule.png "5V 2 Channel Relay Module")
+
+**Duplex Receptacle Wall Plate**
+
+![Duplex Receptacle Wall Plate](https://raw.githubusercontent.com/khinds10/PowerHub/master/construction/DeviceDuplexReceptacleOutletWallPlate.png "Duplex Receptacle")
+
+**Duplex Receptacle**
+
+![Duplex Receptacle](https://raw.githubusercontent.com/khinds10/PowerHub/master/construction/DuplexReceptacle.png "Duplex Receptacle")
+
+**Pi Zero W**
+
+![Pi Zero W](https://raw.githubusercontent.com/khinds10/PowerHub/master/construction/PiZero.jpg "Pi Zero W")
+
+**Surface Mount Backbox Dual Gang**
+
+![Surface Mount Backbox Dual Gang](https://raw.githubusercontent.com/khinds10/PowerHub/master/construction/SurfaceMountBackboxDualGang.png "Surface Mount Backbox Dual Gang")
+
+**White Illuminated Push Buttons**
+
+![White Illuminated Push Buttons](https://raw.githubusercontent.com/khinds10/PowerHub/master/construction/WhiteIlluminatedPushButton.jpg "White Illuminated Push Buttons")
+
+# Building the Outlet
+
+Break the tab on the side of the outlet to have each socket turn on/off independantly
+
+![Break Outlet Tabs](https://raw.githubusercontent.com/khinds10/PowerHub/master/construction/build/break-tab.jpg "Break Outlet Tabs")
+
+On the Outlet Faceplate using the 1" hole saw cut 2 holes for the buttons to be placed next to the outlets
+
+![Install Buttons](https://raw.githubusercontent.com/khinds10/PowerHub/master/construction/build/install-buttons.jpg "Install Buttons")
+
+![Install Buttons](https://raw.githubusercontent.com/khinds10/PowerHub/master/construction/build/install-buttons2.jpg "Install Buttons")
+
+Make sure all the components will fit in the outlet surface mount box 
+
+![Test Sizing of components](https://raw.githubusercontent.com/khinds10/PowerHub/master/construction/build/test-sizing.jpg "Test Sizing of components")
+
+Wire the Relay to the outlet, from the extension cord going to the wall, connect the ground (green) and neutral (white) directly to the outlet
+
+![Wire Relay](https://raw.githubusercontent.com/khinds10/PowerHub/master/construction/build/wire-relay.jpg "Wire Relay")
+
+For the hot (black) connect them to the relay then from the relay to each outlet hot connectors individually
+
+![Wire Relay](https://raw.githubusercontent.com/khinds10/PowerHub/master/construction/build/wire-relay2.jpg "Wire Relay")
+
+![Test Dry Run](https://raw.githubusercontent.com/khinds10/PowerHub/master/construction/build/wire-testing3.jpg "Test Dry Run")
 
 # Set the Startup Scripts
 
