@@ -1,5 +1,7 @@
-# PowerHub
-Central data persistence hub for internet enabled light and outlets in your home
+# Internet Enabled Power Outlet
+<u>PowerHub Webserver Project & Internet Enabled Outlet Setup</u>
+
+Central data persistence hub for Internet enabled light and outlets in your home
 
 #### Flashing RaspberriPi Hard Disk / Install Required Software (Using Ubuntu Linux)
 
@@ -234,6 +236,12 @@ Wire the Relay to the outlet, from the extension cord going to the wall, connect
 For the hot (black) connect them to the relay then from the relay to each outlet hot connectors individually
 
 ![Wire Relay](https://raw.githubusercontent.com/khinds10/PowerHub/master/construction/build/wire-relay2.jpg "Wire Relay")
+
+# Wiring Diagram
+
+-- DIAGRAM HERE
+
+After final assembly before screwing the hole unit together, perform a dry run of the device to make sure there's no shorts, bad wiring
 
 ![Test Dry Run](https://raw.githubusercontent.com/khinds10/PowerHub/master/construction/build/wire-testing3.jpg "Test Dry Run")
 
