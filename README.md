@@ -1,5 +1,7 @@
 # Internet Enabled Power Outlet
-<u>PowerHub Webserver Project & Internet Enabled Outlet Setup</u>
+<u>PowerHub Webserver Project & Internet Enabled Outlet Setup Instructions</u>
+
+![Test Dry Run](https://raw.githubusercontent.com/khinds10/PowerHub/master/construction/build/finished.jpg "Test Dry Run")
 
 Central data persistence hub for Internet enabled light and outlets in your home
 
@@ -237,9 +239,13 @@ For the hot (black) connect them to the relay then from the relay to each outlet
 
 ![Wire Relay](https://raw.githubusercontent.com/khinds10/PowerHub/master/construction/build/wire-relay2.jpg "Wire Relay")
 
+Additional Wiring and Assembly Images
+
+![Assembly](https://raw.githubusercontent.com/khinds10/PowerHub/master/construction/build/assemble.png "Assembly")
+
 # Wiring Diagram
 
--- DIAGRAM HERE
+![Assembly](https://raw.githubusercontent.com/khinds10/PowerHub/master/construction/build/wiringdiagram.png "Assembly")
 
 After final assembly before screwing the hole unit together, perform a dry run of the device to make sure there's no shorts, bad wiring
 
