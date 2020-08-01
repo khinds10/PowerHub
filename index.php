@@ -88,7 +88,7 @@ $dashboardOption = '';
 if (isset($matches[0])) $dashboardOption = trim($matches[0], '/');
 
 // get id number for reading or flag if present
-preg_match('/\/[0-9]\/?/', $urlParts['path'], $matches);
+preg_match('/\/[0-9]+\/?/', $urlParts['path'], $matches);
 $idNumber = 0;
 if (isset($matches[0])) $idNumber = trim($matches[0], '/');
 
