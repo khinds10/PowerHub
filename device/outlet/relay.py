@@ -21,6 +21,10 @@ relayOne = False
 relayTwo = False
 relayOneCheck = False
 relayTwoCheck = False
+webgpio.setPinHigh(settings.relayOnePin)
+webgpio.setPinLow(settings.buttonOneLightPin)
+webgpio.setPinHigh(settings.relayTwoPin)
+webgpio.setPinLow(settings.buttonTwoLightPin)
 while True:
     try:
         relayOneCheck = webgpio.getRelayValue(settings.flagOne)
