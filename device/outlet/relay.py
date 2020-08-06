@@ -26,7 +26,7 @@ webgpio.setPinLow(settings.buttonOneLightPin)
 webgpio.setPinHigh(settings.relayTwoPin)
 webgpio.setPinLow(settings.buttonTwoLightPin)
 while True:
-    #try:
+    try:
         relayOneCheck = webgpio.getRelayValue(settings.flagOne)
         if relayOne != relayOneCheck:
             if relayOneCheck:
@@ -47,5 +47,5 @@ while True:
                 webgpio.setPinLow(settings.buttonTwoLightPin)
             relayTwo = relayTwoCheck
         time.sleep(5)
-    #except (Exception):
-    #    time.sleep(1)
+    except (Exception):
+        time.sleep(30)
